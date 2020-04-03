@@ -4,22 +4,20 @@
 
 Departments
 -
-dept_no VARCHAR PK
-dept_name VARCHAR
+dept_no VARCHAR(15) PK
+dept_name VARCHAR(30)
 
 Employee_Department
 -
-ID INTEGER PK
-dept_no VARCHAR FK >-< Departments.dept_no
+dept_no VARCHAR(15) FK >-< Departments.dept_no
 emp_no INTEGER FK >-< Employees.emp_no
 from_date DATE
 to_date DATE
 
 Manager_Department
 ----
-ID INTEGER PK
-dept_no VARCHAR FK >-< Departments.dept_no
 emp_no INTEGER FK >-< Employees.emp_no
+dept_no VARCHAR(15) FK >-< Departments.dept_no
 from_date DATE
 to_date DATE
 
@@ -29,8 +27,8 @@ Employees
 ------------
 emp_no INTEGER PK
 birth_date DATE
-first_name VARCHAR
-last_name VARCHAR
+first_name VARCHAR(30)
+last_name VARCHAR(30)
 gender VARCHAR
 hire_date DATE
 
@@ -44,6 +42,6 @@ to_date DATE
 Titles
 ----
 emp_no INTEGER FK - Employees.emp_no
-title VARCHAR 
+title VARCHAR(60) 
 from_date DATE
 to_date DATE
