@@ -15,17 +15,25 @@ CREATE TABLE "Departments" (
 );
 
 CREATE TABLE "Department_Employee" (
+    "id" serial   NOT NULL,
     "emp_no" INTEGER   NOT NULL,
     "dept_no" VARCHAR(15)   NOT NULL,
     "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+    "to_date" DATE   NOT NULL,
+    CONSTRAINT "pk_Department_Employee" PRIMARY KEY (
+        "id","emp_no","dept_no"
+     )
 );
 
 CREATE TABLE "Department_Manager" (
+    "id" serial   NOT NULL,
     "dept_no" VARCHAR(15)   NOT NULL,
     "emp_no" INTEGER   NOT NULL,
     "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+    "to_date" DATE   NOT NULL,
+    CONSTRAINT "pk_Department_Manager" PRIMARY KEY (
+        "id","emp_no"
+     )
 );
 
 -- Table documentation comment 1 (try the PDF/RTF export)
@@ -43,17 +51,25 @@ CREATE TABLE "Employees" (
 );
 
 CREATE TABLE "Salaries" (
+    "id" serial   NOT NULL,
     "emp_no" INTEGER   NOT NULL,
     "salary" INTEGER   NOT NULL,
     "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+    "to_date" DATE   NOT NULL,
+    CONSTRAINT "pk_Salaries" PRIMARY KEY (
+        "id","emp_no"
+     )
 );
 
 CREATE TABLE "Titles" (
+    "id" serial   NOT NULL,
     "emp_no" INTEGER   NOT NULL,
     "title" VARCHAR(60)   NOT NULL,
     "from_date" DATE   NOT NULL,
-    "to_date" DATE   NOT NULL
+    "to_date" DATE   NOT NULL,
+    CONSTRAINT "pk_Titles" PRIMARY KEY (
+        "id"
+     )
 );
 
 ALTER TABLE "Department_Employee" ADD CONSTRAINT "fk_Department_Employee_emp_no" FOREIGN KEY("emp_no")

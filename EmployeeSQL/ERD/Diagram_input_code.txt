@@ -7,17 +7,17 @@ Departments
 dept_no VARCHAR(15) PK
 dept_name VARCHAR(30)
 
-Employee_Department
+Department_Employee
 -
-dept_no VARCHAR(15) FK >-< Departments.dept_no
-emp_no INTEGER FK >-< Employees.emp_no
+emp_no INTEGER PK FK >-< Employees.emp_no
+dept_no VARCHAR(15) PK FK >-< Departments.dept_no
 from_date DATE
 to_date DATE
 
-Manager_Department
+Department_Manager
 ----
+dept_no VARCHAR(15) PK FK >-< Departments.dept_no
 emp_no INTEGER FK >-< Employees.emp_no
-dept_no VARCHAR(15) FK >-< Departments.dept_no
 from_date DATE
 to_date DATE
 
@@ -34,14 +34,14 @@ hire_date DATE
 
 Salaries
 ----
-emp_no INTEGER FK - Employees.emp_no
+emp_no INTEGER PK FK - Employees.emp_no
 salary INTEGER 
 from_date DATE
 to_date DATE
 
 Titles
 ----
-emp_no INTEGER FK - Employees.emp_no
+emp_no INTEGER PK FK - Employees.emp_no
 title VARCHAR(60) 
 from_date DATE
 to_date DATE
