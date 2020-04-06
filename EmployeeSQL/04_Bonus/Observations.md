@@ -15,7 +15,7 @@ When drilling down to view the data at a higher grain, the data seems to have in
 
 ### The Koblick Data
 ![Koblick_data.png](Images/Koblick_data.png)
-# Take the case of Chirstian Koblick, Employee No. 10004. According to the data, Chirstian was hired in 1986 as an Engineer at a salary of $40,054. He was promoted from Engineer to Senior Engineer in 1995, yet his salary still shows as $40,054, despite 9 years of inflation and a promotion. 
-# Looking at another employee named Koblick, we find that Rajmohan Koblick, Employee No. 10908, held the title of Staff from 04/05/1986 to 04/05/1993, yet his salary end date is 04/05/1987. If true, this suggests that he worked unpaid for the remaining 6 years as a Staff employee.
+* Take the case of Chirstian Koblick, Employee No. 10004. According to the data, Chirstian was hired in 1986 as an Engineer at a salary of $40,054. He was promoted from Engineer to Senior Engineer in 1995, yet his salary still shows as $40,054, despite 9 years of inflation and a promotion. 
+* Looking at another employee named Koblick, we find that Rajmohan Koblick, Employee No. 10908, held the title of Staff from 04/05/1986 to 04/05/1993, yet his salary end date is 04/05/1987. If true, this suggests that he worked unpaid for the remaining 6 years as a Staff employee.
 
 Taken together, the points above suggest that the data set comes from set of random test data.
